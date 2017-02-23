@@ -24,17 +24,9 @@ import java.util.List;
 
 public class FragmentTab extends AppCompatActivity implements View.OnClickListener{
 
-
-    //private List<Music> musicList = new ArrayList<>();
     private RecyclerView recyclerView;
-    private MusicAdapter mAdapter;
     private FloatingActionButton mfabButton;
     DbHelper dbHelper;
-//    String albumname;
-//    String trackname;
-//    Intent intent;
-//    int flag =0;
-    ItemTouchHelperAdapter ad;
     ArrayList<Music> al;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,22 +34,15 @@ public class FragmentTab extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_fragment_tab);
         mfabButton = (FloatingActionButton)findViewById(R.id.fab);
         mfabButton.setOnClickListener(this);
-
         dbHelper = new DbHelper(this);
-
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-
     }
 
     @Override
     protected void onResume(){
         super.onResume();
-
         dbHelper = new DbHelper(this);
-
         final Cursor cursor;
-
-
         if(dbHelper.getAllMusicItems()==null) {
 
         }
@@ -70,8 +55,6 @@ public class FragmentTab extends AppCompatActivity implements View.OnClickListen
                     continue;
                 }
                 obj = new Music(cursor.getString(1), cursor.getString(2),Integer.parseInt(cursor.getString(0)));
-//                obj.setAlbumName(cursor.getString(1));
-//                obj.setTrackName(cursor.getString(2));
                 al.add(obj);
             }
             MusicAdapter adapt = new MusicAdapter(al,dbHelper);
@@ -87,12 +70,6 @@ public class FragmentTab extends AppCompatActivity implements View.OnClickListen
         }
 
     }
-    public void onDelete(){
-        //onStart();
-        //onResume();
-    }
-
-
 
     @Override
     public void onClick(View v) {

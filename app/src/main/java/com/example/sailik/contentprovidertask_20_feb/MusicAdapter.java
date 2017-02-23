@@ -27,9 +27,7 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
     @Override
     public void onItemDismiss(int position) {
         remove(position);
-
         //Log.d("onswipe",""+position);
-
         mdbobj.deleteMusicItem(musicList.get(position).getId());
     }
 
@@ -76,7 +74,6 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MyViewHolder
     }
 
     public void remove(int position) {
-
         notifyItemRemoved(position);
         Cursor cursor = mdbobj.getAllMusicItems();
         musicList.clear();

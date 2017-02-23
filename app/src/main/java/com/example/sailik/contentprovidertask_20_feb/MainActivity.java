@@ -41,11 +41,11 @@ public class MainActivity extends TabActivity {
         TabMenu1.setContent(new Intent(this, FragmentTab.class));
 
 
-        TabMenu2.setIndicator("Manasa");
+        TabMenu2.setIndicator("Vinay");
 
         TabMenu2.setContent(new Intent(this, FragmentTab2.class));
 
-        TabMenu3.setIndicator("Vinay");
+        TabMenu3.setIndicator("Manasa");
 
         TabMenu3.setContent(new Intent(this, FragmentTab3.class));
 

@@ -45,7 +45,6 @@ public class DbHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(COLUMN_ALBUM, albumName);
         contentValues.put(COLUMN_TRACK, trackName);
-        //contentValues.put(PERSON_COLUMN_AGE, age);
         db.insert(TABLE_NAME, null, contentValues);
         return true;
     }
@@ -65,18 +64,14 @@ public class DbHelper extends SQLiteOpenHelper {
 
     }
 
-    public Cursor getImages(String id, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
+    public Cursor getItems(String id, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
         SQLiteQueryBuilder sqliteQueryBuilder = new SQLiteQueryBuilder();
-        //DbHelper dbObj = new DbHelper(b);
+
         sqliteQueryBuilder.setTables(TABLE_NAME);
 
         if(id != null) {
             sqliteQueryBuilder.appendWhere("_id" + " = " + id);
         }
-
-//        if(sortOrder == null || sortOrder == "") {
-//            sortOrder = "IMAGETITLE";
-//        }
         Cursor cursor = sqliteQueryBuilder.query(getReadableDatabase(),
                 projection,
                 selection,

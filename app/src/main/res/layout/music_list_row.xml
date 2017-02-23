@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+
+    android:clickable="true"
+    android:background="?android:attr/selectableItemBackground"
+    >
+
+    <!--<TextView-->
+        <!--android:id="@+id/title"-->
+        <!--android:textColor="@color/title"-->
+        <!--android:textSize="16dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/genre"-->
+        <!--android:layout_below="@id/title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/year"-->
+        <!--android:textColor="@color/year"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:text="Album Name :"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/album_tv"-->
+        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>-->
+
+    <!--<TextView-->
+        <!--android:text="fill the field"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_toRightOf="@+id/album_tv"-->
+        <!--android:id="@+id/albumname_tv"-->
+        <!--android:paddingLeft="10dp"-->
+        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>-->
+
+    <!--<TextView-->
+        <!--android:text="Track Name :"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/album_tv"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:id="@+id/track_tv"-->
+        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>-->
+
+    <!--<TextView-->
+        <!--android:text="fill the field"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+
+        <!--android:layout_toRightOf="@+id/track_tv"-->
+
+        <!--android:paddingLeft="15dp"-->
+        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"-->
+        <!--android:id="@+id/trackname_tv"-->
+        <!--android:layout_alignTop="@+id/track_tv" />-->
+    <TextView
+        android:id="@+id/itemID"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:id="@+id/albumName_label"
+        android:textColor="@color/albumname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album :  "
+        android:layout_below="@+id/itemID"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="@color/trackname"
+        android:id="@+id/albumname_tv"
+        android:layout_alignBottom="@+id/albumName_label"
+        android:layout_toRightOf="@+id/albumName_label"
+        android:layout_toEndOf="@+id/albumName_label" />
+
+    <TextView
+        android:text="Track :  "
+        android:textColor="@color/albumname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/albumName_label"
+        android:layout_marginTop="10dp"
+        android:id="@+id/trackName_label"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:textColor="@color/trackname"
+
+        android:id="@+id/trackname_tv"
+        android:layout_alignBottom="@+id/trackName_label"
+        android:layout_toRightOf="@+id/albumName_label"
+        android:layout_toEndOf="@+id/albumName_label" />
+
+
+</RelativeLayout>
